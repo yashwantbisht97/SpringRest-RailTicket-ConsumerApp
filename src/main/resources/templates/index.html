@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+	<div>
+		<h1>View Tickets</h1>
+		<table class="table table-bordered table-striped">
+			<thead>			
+				<tr>
+							<th>Ticket Number</th>
+							<th>Passenger Name</th>
+							<th>From</th>
+							<th>To</th>
+							<th>DOJ</th>
+							<th>Train No.</th>
+							<th>Status</th>
+			   </tr>
+		</thead>
+		<tbody>
+			<tr th:each="t: ${tickets}">
+				<td th:text:"${t.ticketNum}"></td>
+				<td th:text:"${t.name}"></td>
+				<td th:text:"${t.from}"></td>
+				<td th:text:"${t.to}"></td>
+				<td th:text:"${t.doj}"></td>
+				<td th:text:"${t.trainNum}"></td>
+				<td th:text:"${t.status}"></td>
+				
+				
+			</tr>
+		</tbody>
+			
+		</table>
+	</div>
+    <h1>Hello, world!</h1>
+  </body>
+</html>
